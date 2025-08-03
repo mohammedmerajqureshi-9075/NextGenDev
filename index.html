@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NextGenDev - Premium full-stack developer creating exceptional digital experiences with cutting-edge technology and innovative design." />
+    <meta name="keywords" content="web development, full-stack developer, React, TypeScript, modern web design, freelance developer" />
+    <meta name="author" content="NextGenDev" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NextGenDev - Next Generation Developer" />
+    <meta property="og:description" content="Premium full-stack developer creating exceptional digital experiences with cutting-edge technology and innovative design." />
+    <meta property="og:url" content="https://nextgendev.com" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="NextGenDev - Next Generation Developer" />
+    <meta property="twitter:description" content="Premium full-stack developer creating exceptional digital experiences with cutting-edge technology and innovative design." />
+    
+    <title>NextGenDev - Next Generation Developer Portfolio</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//images.pexels.com">
+    
+    <style>
+      /* Critical CSS for initial render */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', system-ui, sans-serif;
+        background-color: #0f172a;
+        color: #f1f5f9;
+        overflow-x: hidden;
+      }
+      
+      /* Loading screen */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #1e293b;
+        border-top: 2px solid #00ff88;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loaded #loading-screen {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Remove loading screen when page is loaded
+      window.addEventListener('load', () => {
+        document.body.classList.add('loaded');
+      });
+      
+      // Fallback to remove loading screen after 3 seconds
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+      }, 3000);
+    </script>
+  </body>
+</html>
