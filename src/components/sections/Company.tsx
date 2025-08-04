@@ -18,69 +18,87 @@ const services = [
     title: 'Web Development',
     description: 'Modern, responsive websites built with the latest technologies',
     icon: Globe,
-    technologies: ['React', 'Next.js', 'TypeScript', 'Node.js']
+    technologies: ['HTML5', ' CSS3',  'Tailwind CSS',  'Bootstrap' , 'Material UI',
+'React' , 'Next.js' , 'TypeScript' , 'JavaScript',
+'Chakra UI' , 'Shadcn UI' , 'Radix UI' , 'Framer Motion' , 'Smooth Motion',
+'Redux' , 'Context API']
   },
   {
     id: '2',
     title: 'Mobile Development',
     description: 'Cross-platform mobile applications for iOS and Android',
     icon: Smartphone,
-    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin']
+    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Dart', 'Expo' ,'Lonic', 'React Navigation', 
+      'NativeBase', 'Material UI', 'Chakra UI', 'Shadcn UI'
+    ]
   },
   {
     id: '3',
     title: 'Backend Development',
     description: 'Scalable APIs and database architecture',
     icon: Database,
-    technologies: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB']
+    technologies: ['Node.js' , 'Express.js' , 'Python' , 'Flask',
+'SQL' , 'MongoDB' ,'PostgreSQL', 'Bcrypt/Argon2','Jsonwebtoken(JWT)','Cors','Dontenv','Multer','Morgan'
+,'Helmet', 'Mongoose','Prisma','Sequelize','Socket.io'
+]
   },
   {
     id: '4',
     title: 'Cloud Solutions',
     description: 'Deployment and infrastructure management',
     icon: Cloud,
-    technologies: ['AWS', 'Vercel', 'Docker', 'Kubernetes']
+    technologies: ['AWS (S3)', 'Cloudinary', 'Vercel', 'Netlify','RailwayDB', 'Render', 'CI/CD Pipelines', 'Clustering','Domain Deployment','Google Cloud Platform(GCP)',
+      'Microsoft Azure', 'DigitalOcean', 'Heroku', 'Firebase', 'Cloudflare','Supabase'
+    ]
   },
   {
     id: '5',
     title: 'UI/UX Design',
     description: 'Beautiful, intuitive user interface design',
     icon: Palette,
-    technologies: ['Figma', 'Adobe XD', 'Framer', 'Sketch']
+    technologies: ['Figma', 'Adobe XD', 'Framer', 'Sketch','Canva','Framer','Zeplin']
   },
   {
     id: '6',
     title: 'Performance Optimization',
     description: 'Speed optimization and technical SEO',
     icon: Zap,
-    technologies: ['Lighthouse', 'WebVitals', 'CDN', 'Caching']
+    technologies: ['Lazy Loading','Code Splitting','Image Optimization','Use CDN','Tree Shaking','Lighthouse', 'WebVitals', 'CDN', 'Caching'
+      ,'Caching','Avoid Unnecessary Re-Render','Virtualization','Reduce Third-Party Scripts'
+    ]
   }
 ];
 
 const experiences = [
   {
     id: '1',
-    company: 'TechCorp Solutions',
+    company: 'Shopcardd',
     position: 'Senior Full-Stack Developer',
-    duration: '2022 - Present',
-    description: 'Leading development of enterprise web applications serving 100k+ users',
-    technologies: ['React', 'Node.js', 'AWS', 'TypeScript']
+    duration: ' 2025 – Present',
+    description: 'Leading architecture and full-stack development of scalable internal office management tools and task tracking systems. Integrated real-time features, cloud deployments, and UI/UX optimizations serving growing teams and enterprise clients.',
+    technologies: ['React', 'Node.js', 'AWS', 'TypeScript','Next.js','MongoDB','Tailwind CSS',
+      'AWS S3','CI/CD','Vercel' ,'Render'
+    ]
   },
   {
     id: '2',
-    company: 'Innovation Labs',
-    position: 'Frontend Developer',
-    duration: '2020 - 2022',
-    description: 'Developed award-winning mobile-first web applications',
-    technologies: ['Vue.js', 'React Native', 'Firebase', 'GraphQL']
+    company: 'Freelance / Contract',
+    position: 'Full-Stack Developer',
+    duration: '2022 – 2024',
+    description: 'Built and deployed responsive web apps and mobile-first platforms for startups and clients, focusing on user authentication, cloud integrations, and modular UI components using React Native and Express.js.',
+    technologies: ['React Native', 'Express.js', 'Firebase', 'GraphQL','Cloudinary',
+      'Redux','Postman','GitHub','Netlify','Ui/Ux','Figma'
+    ]
   },
   {
     id: '3',
-    company: 'StartupVenture',
+    company: 'Tekisky Private Limited (Tekisky Mart)',
     position: 'Full-Stack Developer',
-    duration: '2019 - 2020',
-    description: 'Built MVP products from concept to launch for early-stage startups',
-    technologies: ['Angular', 'Python', 'PostgreSQL', 'Docker']
+    duration: '2020 – 2022',
+    description: 'Worked on internal projects including Tekisky Mart, a digital shopping and inventory management platform. Delivered mobile-ready eCommerce interfaces, secure backend APIs, and cloud-based deployments.',
+    technologies: ['React', 'React Native', 'Express.js', 'MongoDB','Redux','Tailwind CSS','Cloudinary'
+      ,'GitHub','Netlify','Postman'
+    ]
   }
 ];
 
