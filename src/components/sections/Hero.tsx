@@ -40,7 +40,13 @@ export const Hero: React.FC = () => {
   }, []);
 
   const scrollToNext = () => {
-    const aboutSection = document.querySelector('#about');
+    const aboutSection = document.querySelector('#projects');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+   const scrollToContact = () => {
+    const aboutSection = document.querySelector('#contact');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -114,7 +120,7 @@ export const Hero: React.FC = () => {
             <Button size="lg" onClick={() => scrollToNext()}>
               View My Work
             </Button>
-            <Button variant="outline" size="lg" href="#contact">
+            <Button variant="outline" size="lg" onClick={() => scrollToContact()}>
               Let's Connect
             </Button>
           </motion.div>

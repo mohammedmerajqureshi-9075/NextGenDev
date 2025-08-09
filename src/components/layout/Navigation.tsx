@@ -32,7 +32,12 @@ export const Navigation: React.FC = () => {
       setIsOpen(false);
     }
   };
-
+//  const scrollOnHome = () => {
+//     const aboutSection = document.querySelector('#home');
+//     if (aboutSection) {
+//       aboutSection.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -54,7 +59,7 @@ export const Navigation: React.FC = () => {
             whileHover={{ scale: 1.05 }}
           >
             <Code2 className="w-8 h-8 text-primary" />
-            <span className="text-xl font-bold text-text">NextGenDev</span>
+            <span className="text-xl font-bold text-text" >NextGenDev</span>
           </motion.div>
 
           {/* Desktop Navigation */}

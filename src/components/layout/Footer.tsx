@@ -6,9 +6,9 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' }
+    { icon: Github, href: 'https://github.com/mohammedmerajqureshi-9075', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/nexgen-dev-b237a8364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/dev_vibes_world/', label: 'Instagram' }
   ];
 
   return (
@@ -64,9 +64,9 @@ export const Footer: React.FC = () => {
           >
             <h4 className="text-lg font-semibold text-text mb-4">Contact</h4>
             <div className="space-y-2 text-text/60">
-              <p>hello@nextgendev.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>mohammedmerajqureshi9075@gmail.com</p>
+              <p>+91 9075254327</p>
+              <p>Nanded Maharashtra</p>
             </div>
           </motion.div>
         </div>
@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
               >
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
               </motion.span>
-              {' '}in San Francisco
+              {' '}in Maharshtra India
             </motion.p>
 
             {/* Social Links */}

@@ -24,8 +24,7 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     submitApi.start({ submitProgress: 1 });
 
-    // Create WhatsApp message link
-    const whatsappNumber = '919075254327'; // Without "+" sign
+    const whatsappNumber = '919075254327'; // Without "+"
     const whatsappText = `Hello Meraj Qureshi 👋%0A
 Name: ${form.name}%0A
 Email: ${form.email}%0A
@@ -33,7 +32,6 @@ Phone: ${form.phone}%0A
 Message: ${form.message}`;
 
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappText}`;
-
     window.open(whatsappUrl, '_blank');
 
     setIsSubmitted(true);
@@ -181,7 +179,7 @@ Message: ${form.message}`;
                     onChange={(e) => handleInputChange(field as keyof ContactForm, e.target.value)}
                     onFocus={() => setFocusedField(field)}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 bg-bg-secondary/50 backdrop-blur-sm border border-text/20 rounded-xl text-text placeholder-text/50 focus:outline-none focus:border-primary/50 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-bg-secondary/50 backdrop-blur-sm border border-text/20 rounded-xl text-black placeholder-text/50 focus:outline-none focus:border-primary/50 transition-all duration-300"
                     placeholder={label}
                     required
                     animate={{
@@ -212,7 +210,7 @@ Message: ${form.message}`;
                   onFocus={() => setFocusedField('message')}
                   onBlur={() => setFocusedField(null)}
                   rows={5}
-                  className="w-full px-4 py-3 bg-bg-secondary/50 backdrop-blur-sm border border-text/20 rounded-xl text-text placeholder-text/50 focus:outline-none focus:border-primary/50 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-bg-secondary/50 backdrop-blur-sm border border-text/20 rounded-xl text-black placeholder-text/50 focus:outline-none focus:border-primary/50 transition-all duration-300 resize-none"
                   placeholder="Message"
                   required
                   animate={{

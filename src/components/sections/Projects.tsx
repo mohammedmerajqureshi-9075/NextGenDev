@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: 'A student portal with an integrated admin dashboard for college management.',
     technologies: ['Next.js', 'express.js', 'nodejs', 'mongodb'],
     image: 'https://i.postimg.cc/c1BGKg63/Screenshot-2025-08-05-075139.png',
-    liveUrl: 'https://mpgin-college-frontend-v2.vercel.app/',
+    liveUrl: 'https://mpgi.ac.in/',
     featured: true
   },
   {
