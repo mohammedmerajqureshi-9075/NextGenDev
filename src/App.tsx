@@ -12,7 +12,7 @@ import { Footer } from './components/layout/Footer';
 function App() {
   useEffect(() => {
     // Set up smooth scrolling for the entire page
-    document.documentElement.style.scrollBehavior = 'smooth';
+    document.documentElement.style.scrollBehavior = 'auto';
     
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
