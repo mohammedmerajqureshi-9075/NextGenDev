@@ -127,9 +127,9 @@ export const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 1.4 }}
           >
             {[
-              { icon: Github, href: 'https://github.com', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' }
+              { icon: Github, href: 'https://github.com/mohammedmerajqureshi-9075', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/nexgen-dev-b237a8364/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
+              { icon: Instagram, href: 'https://www.instagram.com/dev_vibes_world/', label: 'Instagram' }
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
