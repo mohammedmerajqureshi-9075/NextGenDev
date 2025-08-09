@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useSpring, animated } from '@react-spring/web';
-import { Send, Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
+import { Send, Mail, CheckCircle, Instagram, MessageCircle } from 'lucide-react';
 import { ContactForm } from '../../types';
 import { Button } from '../ui/Button';
 
@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
   const [form, setForm] = useState<ContactForm>({
     name: '',
     email: '',
-    subject: '',
+    phone: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -20,17 +20,25 @@ export const Contact: React.FC = () => {
     config: { tension: 200, friction: 20 }
   }));
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simulate form submission
     submitApi.start({ submitProgress: 1 });
-    
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setForm({ name: '', email: '', subject: '', message: '' });
-      submitApi.set({ submitProgress: 0 });
-    }, 1500);
+
+    // Create WhatsApp message link
+    const whatsappNumber = '919075254327'; // Without "+" sign
+    const whatsappText = `Hello Meraj Qureshi 👋%0A
+Name: ${form.name}%0A
+Email: ${form.email}%0A
+Phone: ${form.phone}%0A
+Message: ${form.message}`;
+
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappText}`;
+
+    window.open(whatsappUrl, '_blank');
+
+    setIsSubmitted(true);
+    setForm({ name: '', email: '', phone: '', message: '' });
+    submitApi.set({ submitProgress: 0 });
   };
 
   const handleInputChange = (field: keyof ContactForm, value: string) => {
@@ -38,9 +46,24 @@ export const Contact: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'hello@nextgendev.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567' },
-    { icon: MapPin, label: 'Location', value: 'San Francisco, CA' }
+    {
+      icon: Mail,
+      label: 'Email',
+      value: 'mohammedmerajqureshi9075@gmail.com',
+      href: 'mailto:mohammedmerajqureshi9075@gmail.com'
+    },
+    {
+      icon: MessageCircle,
+      label: 'WhatsApp',
+      value: '+91 9075254327',
+      href: 'https://api.whatsapp.com/send?phone=+919075254327&text=Hello%20Meraj%20Qureshi%F0%9F%91%8B!'
+    },
+    {
+      icon: Instagram,
+      label: 'Instagram',
+      value: '@dev_vibes_world',
+      href: 'https://www.instagram.com/dev_vibes_world/'
+    }
   ];
 
   if (isSubmitted) {
@@ -63,7 +86,7 @@ export const Contact: React.FC = () => {
             </motion.div>
             <h3 className="text-2xl font-bold text-text mb-4">Thank You!</h3>
             <p className="text-text/70 mb-6">
-              Your message has been sent successfully. I'll get back to you within 24 hours.
+              Your message has been sent via WhatsApp. I’ll get back to you soon.
             </p>
             <Button onClick={() => setIsSubmitted(false)}>
               Send Another Message
@@ -93,7 +116,6 @@ export const Contact: React.FC = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -110,14 +132,17 @@ export const Contact: React.FC = () => {
             </div>
 
             {contactInfo.map((info, index) => (
-              <motion.div
+              <motion.a
                 key={info.label}
-                className="flex items-center space-x-4 p-4 bg-bg-secondary/50 backdrop-blur-sm rounded-xl border border-text/10 hover:border-primary/30 transition-all duration-300"
+                href={info.href || undefined}
+                className="flex items-center space-x-4 p-4 bg-bg-secondary/50 backdrop-blur-sm rounded-xl border border-text/10 hover:border-primary/30 transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, x: 5 }}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
                   <info.icon className="w-6 h-6 text-primary" />
@@ -126,11 +151,10 @@ export const Contact: React.FC = () => {
                   <p className="text-sm text-text/60">{info.label}</p>
                   <p className="text-text font-medium">{info.value}</p>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -141,7 +165,7 @@ export const Contact: React.FC = () => {
               {[
                 { field: 'name', label: 'Name', type: 'text' },
                 { field: 'email', label: 'Email', type: 'email' },
-                { field: 'subject', label: 'Subject', type: 'text' }
+                { field: 'phone', label: 'Phone', type: 'tel' }
               ].map(({ field, label, type }) => (
                 <motion.div
                   key={field}
@@ -221,9 +245,7 @@ export const Contact: React.FC = () => {
                   <span className="relative z-10">Send Message</span>
                   <animated.div
                     className="absolute inset-0 bg-primary/20"
-                    style={{
-                      width: submitProgress.to(p => `${p * 100}%`)
-                    }}
+                    style={{ width: submitProgress.to(p => `${p * 100}%`) }}
                   />
                 </Button>
               </motion.div>

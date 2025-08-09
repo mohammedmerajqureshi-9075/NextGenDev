@@ -6,65 +6,60 @@ import { Project } from '../../types';
 const projects: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with advanced features',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    image: 'https://images.pexels.com/photos/shopping-cart/pexels-photo-shopping-cart.jpeg?auto=compress&cs=tinysrgb&w=800',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'School Website',
+    description: 'A school portal with essential features; visit the live site using the link below.',
+    technologies: ['React', 'Node.js', 'express.js', 'mongodb'],
+    image: 'https://i.postimg.cc/90smQzW0/Screenshot-2025-08-05-075820.png',
+    liveUrl: 'https://neiea-ngo-frontend.vercel.app/',
     featured: true
   },
   {
     id: '2',
-    title: 'AI Dashboard',
-    description: 'Real-time analytics dashboard with machine learning insights',
-    technologies: ['Next.js', 'TypeScript', 'Python', 'TensorFlow'],
-    image: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=800',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'College Website',
+    description: 'A student portal with an integrated admin dashboard for college management.',
+    technologies: ['Next.js', 'express.js', 'nodejs', 'mongodb'],
+    image: 'https://i.postimg.cc/c1BGKg63/Screenshot-2025-08-05-075139.png',
+    liveUrl: 'https://mpgin-college-frontend-v2.vercel.app/',
     featured: true
   },
   {
     id: '3',
-    title: 'Mobile Banking App',
-    description: 'Secure mobile banking application with biometric authentication',
-    technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS'],
-    image: 'https://images.pexels.com/photos/8919595/pexels-photo-8919595.jpeg?auto=compress&cs=tinysrgb&w=800',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Tekisky Pvt Ltd',
+    description: 'Tekisky Pvt Ltd is a service-based company offering a range of digital solutions.',
+    technologies: ['React Native','React',  'AWS'],
+    image: 'https://i.postimg.cc/cJDrNx8g/Screenshot-2025-08-05-080003.png',
+    liveUrl: 'https://tekisky.com/',
     featured: false
   },
   {
     id: '4',
-    title: 'Social Media Platform',
-    description: 'Modern social networking platform with real-time features',
-    technologies: ['Vue.js', 'Express', 'Socket.io', 'Redis'],
-    image: 'https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=800',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Tekisky Mart',
+    description: 'An e-commerce platform designed for seamless product browsing and purchase.',
+    technologies: ['React','React Native', 'Express', 'Node', 'MongoDb'],
+    image: 'https://i.postimg.cc/8CCLvnRv/Screenshot-2025-08-05-081209.png',
+    liveUrl: 'https://tekiskymart.com/',
     featured: false
   },
   {
     id: '5',
-    title: 'IoT Dashboard',
-    description: 'Real-time monitoring dashboard for IoT devices',
-    technologies: ['Angular', 'Python', 'InfluxDB', 'Docker'],
-    image: 'https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Muskan Beauty Parlour',
+    description: 'A dedicated site for a beauty parlour, including appointment booking options.',
+    technologies: ['Typescript', 'React', 'Tailwind', 'Gsapp',],
+    image: 'https://i.postimg.cc/pTzbJkxW/Screenshot-2025-08-05-080346.png',
+    liveUrl: 'https://www.muskanbeautyparlour.com/',
     featured: false
   },
   {
     id: '6',
-    title: 'Crypto Trading Bot',
-    description: 'Automated cryptocurrency trading bot with advanced algorithms',
-    technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Docker'],
-    image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Business Website',
+    description: 'A personalized website built for promoting a local fish trading business.',
+    technologies: ['Next.js', 'Typescript', 'Gsapp', 'Smooth Motion'],
+    image: 'https://i.postimg.cc/pLD7my27/Screenshot-2025-08-05-075505.png',
+    liveUrl: 'https://asmak-muscat-int-l-llc.vercel.app/',
     featured: true
   }
 ];
+
 
 export const Projects: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'featured'>('all');
